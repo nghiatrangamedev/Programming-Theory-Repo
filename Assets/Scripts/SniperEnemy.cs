@@ -35,7 +35,7 @@ public class SniperEnemy : Enemy
         if (!_isShooting && transform.position.x >= 140)
         {
             _isShooting = true;
-            _bulletPosition = transform.position + Vector3.forward;
+            _bulletPosition = transform.position + new Vector3 (5, 0, 0);
             Instantiate(_bullet, _bulletPosition, transform.rotation);
             StartCoroutine(ShootingRate());
         }
