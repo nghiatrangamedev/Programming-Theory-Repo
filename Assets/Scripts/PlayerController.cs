@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] GameObject _bullet;
 
-
     float horizontalInput;
     float speed = 20.0f;
     float playerHeal = 100.0f;
@@ -77,7 +76,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator ShootingRate()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         _isShooting = false;
     }
 

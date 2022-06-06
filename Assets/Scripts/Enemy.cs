@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] protected Transform _playerPos;
+    protected Transform _playerPos;
     float _enemySpeed = 20.0f;
     // Start is called before the first frame update
     void Start()
     {
+        _playerPos = GameObject.Find("Player").transform;
     }
 
     // Update is called once per frame
